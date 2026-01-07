@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水都地方 (Suito Region) - 公式ポータルサイト</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+        
+        :root {
+            --suito-blue: #0077be;
+            --suito-gold: #d4af37;
+            --suito-terracotta: #e2725b;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f8f9fa;
+            scroll-behavior: smooth;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .dest-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .dest-card:hover {
+            border-color: var(--suito-gold);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold serif text-blue-700">SUITO <span class="text-yellow-600">REGION</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-blue-600 font-medium">地方紹介</a>
+                    <a href="#exceed" class="hover:text-blue-600 font-medium">エクシード</a>
+                    <a href="#pokemon" class="hover:text-blue-600 font-medium">ポケモン</a>
+                    <a href="#story" class="hover:text-blue-600 font-medium">ストーリー</a>
+                    <a href="#map" class="hover:text-blue-600 font-medium">観光ガイド</a>
+                </div>
+                <button class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="h-screen flex items-center justify-center hero-gradient text-white text-center px-4">
+        <div class="max-w-4xl">
+            <h2 class="text-xl md:text-2xl mb-4 tracking-widest uppercase">陽光と運河が織りなす芸術の地</h2>
+            <h1 class="text-5xl md:text-8xl font-bold serif mb-6">スイト地方へ<br>ようこそ</h1>
+            <p class="text-lg md:text-xl mb-10 opacity-90">情熱と歴史、そして新たな絆の力があなたの冒険を待っています。</p>
+            <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-bold transition-all inline-block">冒険を始める</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold serif mb-4">水の都の美しい世界</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 text-2xl">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">水の都ラグーナ</h3>
+                    <p class="text-gray-600">ヴェネツィアを思わせる美しい運河。ゴンドラの歌声が響く、ロマンチックな街並み。</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 text-yellow-600 text-2xl">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">豊かな食文化</h3>
+                    <p class="text-gray-600">ピッツァやパスタ、エスプレッソ。ポケモンと共に楽しむ、水都ならではの味覚。</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 text-red-600 text-2xl">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">芸術と歴史</h3>
+                    <p class="text-gray-600">古の彫刻や、最新のミラノファッション。歴史ある建造物が冒険の舞台に。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exceed Section -->
+    <section id="exceed" class="py-20 bg-slate-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <span class="text-pink-500 font-bold tracking-widest uppercase">NEW BATTLE SYSTEM</span>
+                    <h2 class="text-4xl md:text-5xl font-bold serif mt-2 mb-6">限界を超越する力：エクシード</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        ポケモンの体内エネルギーを限界（リミッター）まで引き出し、「武器」や「装甲」として実体化させる現象。それが「エクシード」です。
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-bolt text-pink-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold block">ステータス上昇とタイプ変化</span>
+                                <span class="text-sm text-gray-400">種族値が合計+100上昇。一部のポケモンは新たなタイプを獲得します。</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-magic text-pink-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold block">エクシードアーツ (EA)</span>
+                                <span class="text-sm text-gray-400">エクシード中だけ使える「5つ目の技」や、既存の技が劇的に強化されます。</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="bg-gradient-to-br from-pink-500/20 to-purple-500/20 p-8 rounded-2xl border border-pink-500/30">
+                        <div class="text-center">
+                            <div class="text-6xl mb-4"><i class="fas fa-shield-alt text-pink-500"></i></div>
+                            <h3 class="text-2xl font-bold mb-2">エースバーン（エクシード）</h3>
+                            <p class="text-pink-300 italic mb-4">"溢れ出す炎の武装"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pokemon Section -->
+    <section id="pokemon" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold serif mb-12">水都に出会うポケモンたち</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pokemon examples remain here as per request focusing on map rewrite -->
+                <div class="bg-white p-6 rounded-xl shadow-sm text-left">
+                    <span class="text-xs font-bold text-gray-400">No.361</span>
+                    <h3 class="text-lg font-bold">コヌスット</h3>
+                    <p class="text-sm text-gray-600 mt-2">市場の食材を狙う小悪党。すばしっこいイタチのポケモン。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-left">
+                    <span class="text-xs font-bold text-gray-400">No.364</span>
+                    <h3 class="text-lg font-bold">シルクイン</h3>
+                    <p class="text-sm text-gray-600 mt-2">ドレスを纏ったような蛾。ミラノコレクションの主役。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-left">
+                    <span class="text-xs font-bold text-gray-400">No.375</span>
+                    <h3 class="text-lg font-bold">ヴェスビオン</h3>
+                    <p class="text-sm text-gray-600 mt-2">怒るとたてがみが噴火する。ポンペイの遺跡の守り神。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-left border-2 border-blue-200">
+                    <span class="text-xs font-bold text-gray-400">No.377</span>
+                    <h3 class="text-lg font-bold">ロズレイド <span class="text-xs text-blue-600">(水都)</span></h3>
+                    <p class="text-sm text-gray-600 mt-2">レイピアのようなトゲを持つ騎士。フェンシングの達人。</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <button class="border-2 border-blue-600 text-blue-600 px-8 py-2 rounded-full font-bold hover:bg-blue-600 hover:text-white transition-all">
+                    <a href="./pokedex/index.html">全380種の図鑑を見る</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section: Rewritten to Tourist Guide Style -->
+    <section id="map" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-bold tracking-widest uppercase">Travel Guide</span>
+                <h2 class="text-4xl md:text-5xl font-bold serif mt-2">水都地方・観光ガイド</h2>
+                <p class="text-gray-500 mt-4">歴史と芸術が息づく、美しき街々を巡る旅。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Laguna City -->
+                <div class="dest-card card-hover">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center text-blue-500 text-6xl"><i class="fas fa-ship"></i></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 serif">水の都 ラグーナシティ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            迷路のように入り組んだ運河と、アドリア海の真珠と称される美しい景観が広がる世界遺産級の都市。夕暮れ時に響くゴンドリエーレの歌声は、訪れる者の心を揺さぶります。ガラス細工や伝統的な仮面舞踏会の文化が今も大切に守られています。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Oblico City -->
+                <div class="dest-card card-hover">
+                    <div class="h-48 bg-amber-50 flex items-center justify-center text-amber-600 text-6xl"><i class="fas fa-landmark"></i></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 serif">歴史の街 オブリコシティ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            アルノ川のほとりに位置する、白い大理石が美しい学術都市。街の象徴である「傾く塔」は、その独特な景観から世界中から観光客が集まります。伝統あるトレーナーズスクールの校舎が立ち並び、真面目ながらも遊び心に満ちた、知的な静寂に包まれた街です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sapien City -->
+                <div class="dest-card card-hover">
+                    <div class="h-48 bg-orange-50 flex items-center justify-center text-orange-600 text-6xl"><i class="fas fa-scroll"></i></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 serif">知恵の都 サピエンシティ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            「知恵の煮込み」と称される、地方最古の大学を擁する赤レンガの街。街全体が「ポルティコ」と呼ばれる長いアーケードで繋がっており、雨の日でも美しい書庫や老舗の料理店を巡ることができます。漂うパスタの香ばしい匂いが、訪れる人を温かく迎えてくれます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Galleria City -->
+                <div class="dest-card card-hover">
+                    <div class="h-48 bg-pink-50 flex items-center justify-center text-pink-400 text-6xl"><i class="fas fa-gem"></i></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 serif">輝きの都 ガレリアシティ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            世界最先端のファッションと芸術が交差する、水都地方最大のメトロポリス。立ち並ぶ高級ブティックと近代的なガラス張りのアーケードは、歩いているだけで映画のワンシーンのような高揚感を与えてくれます。常に最新のトレンドがここから世界へと発信されます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sasso Town -->
+                <div class="dest-card card-hover">
+                    <div class="h-48 bg-stone-100 flex items-center justify-center text-stone-500 text-6xl"><i class="fas fa-mountain"></i></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 serif">洞窟の町 サッソタウン</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            石灰岩の断崖に直接作られた、太古の記憶を留める幻想的な「岩の町」。灰白色の石で統一された重厚な建物が渓谷にへばりつくように並び、まるで時間が止まったかのような不思議な静寂が漂っています。大地の力強さを肌で感じることができる唯一無二のスポットです。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Gloria City -->
+                <div class="dest-card card-hover">
+                    <div class="h-48 bg-yellow-50 flex items-center justify-center text-yellow-600 text-6xl"><i class="fas fa-crown"></i></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 serif">帝都 グロリアシティ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            「全ての道はここへ続く」と言われる、水都地方の首都。巨大な円形競技場コロッセオを彷彿とさせるバトルドームを中心に、数千年の歴史が積み重なった壮大な遺跡と現代の喧騒が共存しています。地方の歴史、政治、バトルの全てがここに集約されています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-400 py-12 px-4 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <span class="text-2xl font-bold serif text-white">SUITO <span class="text-yellow-600">REGION</span></span>
+                <p class="mt-2 text-sm">© 2026 Suito Region Developers. <br>All Rights Reserved.</p>
+            </div>
+            <div class="flex gap-4 text-2xl">
+                <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

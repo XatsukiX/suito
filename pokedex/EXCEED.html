@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水都図鑑</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-black: #1a1a1a;
+            --build-red: #1249ff;
+            --metal-silver: #c0c0c0;
+            --gear-bg: #2a2a2a;
+        }
+
+        body {
+            font-family: 'Chakra Petch', sans-serif;
+            background-color: var(--main-black);
+            /* 歯車パターンの背景 */
+            background-image: 
+                radial-gradient(circle at 20% 20%, var(--gear-bg) 10%, transparent 11%),
+                radial-gradient(circle at 80% 80%, var(--gear-bg) 10%, transparent 11%),
+                linear-gradient(45deg, transparent 48%, var(--gear-bg) 48%, var(--gear-bg) 52%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--gear-bg) 48%, var(--gear-bg) 52%, transparent 52%);
+            background-size: 60px 60px;
+            margin: 0;
+            color: var(--metal-silver);
+        }
+        
+        /* メカニカルなヘッダー */
+        header {
+            background: linear-gradient(to right, var(--main-black), var(--build-red) 50%, var(--main-black));
+            border-bottom: 4px solid var(--metal-silver);
+            padding: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 5px 15px rgba(230, 0, 18, 0.5); /* 赤い発光 */
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* ヘッダーの装飾（パイプ風） */
+        header::before {
+            content: ''; position: absolute; bottom: -10px; left: 0; width: 100%; height: 10px;
+            background: repeating-linear-gradient(90deg, var(--metal-silver), var(--metal-silver) 5px, var(--main-black) 5px, var(--main-black) 10px);
+        }
+
+        header h1 {
+            margin: 0; font-size: 1.8rem; text-shadow: 0 0 10px var(--build-red);
+        }
+        
+        .container {
+            max-width: 900px; margin: 40px auto; padding: 0 20px;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 25px;
+        }
+
+        /* ビルドドライバー風カード */
+        a.card {
+            text-decoration: none; color: var(--metal-silver); display: block;
+            background: linear-gradient(135deg, #333, #111);
+            border: 3px solid var(--metal-silver);
+            border-top-color: var(--build-red); /* 上部を赤く */
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 5px 10px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ホバー時のアクション（発光・変形） */
+        a.card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: inset 0 0 30px var(--build-red), 0 0 20px var(--build-red);
+            border-color: var(--build-red);
+        }
+        
+        /* カード内部の装飾（歯車） */
+        a.card::after {
+            content: '⚙️'; /* 簡易的な歯車アイコン */
+            position: absolute; bottom: -10px; right: -10px; font-size: 50px; color: rgba(255,255,255,0.1);
+            transform: rotate(0deg); transition: transform 0.5s;
+        }
+        a.card:hover::after { transform: rotate(180deg); }
+
+        .card img {
+            width: 100px; height: 100px; margin-bottom: 10px;
+            border: 2px solid var(--build-red); /* 画像枠も赤く */
+            border-radius: 50%; background: #000;
+        }
+        .num { font-size: 0.9rem; color: var(--build-red); font-weight: bold; display: block; letter-spacing: 1px;}
+        .name { font-size: 1.2rem; font-weight: bold; margin-top: 5px; text-shadow: 0 0 5px rgba(255,255,255,0.3);}
+
+    </style>
+</head>
+<body>
+
+    <header><h1>EXCEED POKEDEX</h1></header>
+
+    <div class="container">
+
+        <a href="#" class="card">
+            <img src="./mega/images/245.png">
+            <div class="name">ジャローダ</div>
+        </a>
+ 
+
+        <a href="#" class="card">
+            <img src="./mega/images/245.png">
+            <div class="name">スイクン</div>
+        </a>
+
+    </div>
+
+</body>
+</html>
